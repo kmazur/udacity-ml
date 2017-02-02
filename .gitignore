@@ -1,0 +1,8 @@
+*.iml
+.idea/
+proposal.aux
+proposal.bbl
+proposal.blg
+proposal.log
+proposal.out
+proposal.synctex.gz

@@ -1,0 +1,145 @@
+%%%
+% DOCUMENT
+%%%
+\documentclass[pdftex,a4paper,onecolumn,oneside,11pt,wide,floatssmall,openbib]{mwrep}
+
+
+%%%
+% PACKAGES
+%%%
+\RequirePackage[l2tabu, orthodox]{nag}
+
+\usepackage[english]{babel}
+\usepackage{listings}
+\lstset{language=Python}
+\usepackage{minted}
+
+\usepackage{bbding}
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amscd}
+\usepackage{verbatim}
+\usepackage{graphics}
+
+\usepackage{hyperref}
+
+\usepackage{authblk}
+
+\usepackage[utf8x]{inputenc}
+\usepackage[OT4]{fontenc}
+
+\usepackage{geometry}
+\usepackage[sort, compress]{cite} 
+
+\usepackage{calc}
+\usepackage{color}
+
+\usepackage{latexsym}
+\usepackage{placeins}
+\ifx\pdftexversion\undefined
+\usepackage[dvips]{graphicx}
+\else
+\usepackage[pdftex]{graphicx}
+\fi
+
+\usepackage{url,apacite}    % package url to prevent horrible linebreaks
+
+
+
+%%%
+% COMMANDS
+%%%
+
+\renewcommand{\baselinestretch}{1.05}
+\renewcommand{\sectionmark}[1]{\markboth{\scshape\small\bfseries\thesection.\ #1}{\small\bfseries\thesection.\ #1}}
+\newcommand{\headrulewidth}{0.5pt}
+\newcommand{\footrulewidth}{0.pt}
+
+\renewcommand\listoflistingscaption{List of source codes}
+
+%%%
+% PAGE STYLE
+%%%
+
+\topmargin -1.5in
+\advance\topmargin 25mm
+
+\marginparwidth15mm
+
+\headheight0.0cm
+\headsep0.0cm
+
+\footskip2.0cm
+
+\textwidth\paperwidth
+\advance\textwidth -55mm
+%\textwidth16.5cm
+\textheight23.0cm
+
+\setlength\textheight{48\baselineskip}
+\addtolength\textheight{\topskip}
+
+\def\changemargin#1#2{\list{}{\rightmargin#2\leftmargin#1}\item[]}
+\let\endchangemargin=\endlist 
+
+
+%%%
+% TEXT FORMATTING
+%%%
+
+\clubpenalty=10000
+\widowpenalty=10000
+\brokenpenalty=10000
+
+\tolerance4500
+\pretolerance250
+\hfuzz=1.5pt
+\hbadness1450
+
+
+%%%
+% CODE FORMATTING
+%%%
+
+\usemintedstyle{colorful}
+\newmintedfile[pythoncode]{python}{
+	fontfamily=tt,
+	frame=lines,
+	framesep=2,
+	baselinestretch=1,
+	linenos=true
+}
+
+
+%%%
+% THEOREMS
+%%%
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem*{surfacecor}{Corollary 1}
+\newtheorem{conjecture}{Conjecture} 
+\newtheorem{question}{Question} 
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+
+
+%%%
+% TABLE OF CONTENTS
+%%%
+\hypersetup{
+	colorlinks=true,
+	citecolor=black,
+	filecolor=black,
+	linkcolor=[rgb]{0, 0, 0.6},
+	linktoc=section,
+	urlcolor=black,
+	pdfcreator={Krzysztof Mazur}
+}
+
+
